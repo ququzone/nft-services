@@ -12,4 +12,9 @@ const upload = async (req: Request, res: Response, next: NextFunction) => {
   return res.status(200).json({ hash: metadata });
 };
 
-export default { upload };
+
+export default function handler(req, res) {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.json({ name: 'John Doe' });
+}
