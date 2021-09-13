@@ -1,7 +1,8 @@
-import { Request, Response, NextFunction } from 'express';
 import { NFTStorage, Blob } from 'nft.storage';
 
-const upload = async (req: Request, res: Response, next: NextFunction) => {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const upload = async (req, res) => {
   const apiKey = process.env.NFT_STORAGE_KEY || '';
   const client = new NFTStorage({ token: apiKey });
 
@@ -12,9 +13,4 @@ const upload = async (req: Request, res: Response, next: NextFunction) => {
   return res.status(200).json({ hash: metadata });
 };
 
-
-export default function handler(req, res) {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'application/json');
-  res.json({ name: 'John Doe' });
-}
+export default { upload };

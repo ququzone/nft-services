@@ -4,10 +4,10 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "lint": "eslint ./src --ext .js,.ts",
-        "lint:fix": "eslint ./src --ext .js,.ts --fix",
-        "dev": "nodemon src/index.ts",
-        "build": "rm -rf public/ && prettier --write src/ && tsc",
+        "lint": "eslint ./api --ext .js,.ts",
+        "lint:fix": "eslint ./api --ext .js,.ts --fix",
+        "dev": "nodemon api/index.ts",
+        "build": "rm -rf public/ && prettier --write api/ && tsc",
         "start": "node ./public/index.js"
     },
     "devDependencies": {
