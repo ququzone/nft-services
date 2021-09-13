@@ -1,0 +1,28 @@
+{
+    "name": "nft-services",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint ./src --ext .js,.ts",
+        "lint:fix": "eslint ./src --ext .js,.ts --fix",
+        "dev": "nodemon src/server.ts",
+        "build": "rm -rf build/ && prettier --write src/ && tsc"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.31.0",
+        "@typescript-eslint/parser": "^4.31.0",
+        "eslint": "^7.32.0",
+        "nodemon": "^2.0.12",
+        "prettier": "^2.4.0",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.4.3"
+    },
+    "dependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/express": "^4.17.13",
+        "@types/morgan": "^1.9.3",
+        "axios": "^0.21.4",
+        "morgan": "^1.10.0"
+    }
+}
