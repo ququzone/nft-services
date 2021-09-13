@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 app.get('/api', async (req, res) => {
   res.status(200).send('Hello, NFT!');
 });
-app.get('/api/ipfs/upload', upload.single('file'), ipfs.upload);
+app.post('/api/ipfs/upload', upload.single('file'), ipfs.upload);
 
 app.use((req, res, next) => {
   const error = new Error('not found');
